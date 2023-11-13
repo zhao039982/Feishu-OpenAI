@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "9000:9000/tcp"
+      - "8000:8000/tcp"
     # volumes:
     #   - ./code/config.yaml:/app/config.yaml:ro
     environment:
@@ -19,8 +19,8 @@ services:
       # OpenAI API Key 支持负载均衡, 可以填写多个 Key 用逗号分隔
       - OPENAI_KEY=sk-xxx,sk-xxx,sk-xxx
       # 服务器配置
-      - HTTP_PORT=9000
-      - HTTPS_PORT=9001
+      - HTTP_PORT=8000
+      - HTTPS_PORT=8001
       - USE_HTTPS=false
       - CERT_FILE=cert.pem
       - KEY_FILE=key.pem
